@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./partials/head.html')
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-layout="detached">
+
+    @@include('./partials/topbar-dark.html')
+
+    <div class="container-fluid">
+
+        <div class="wrapper">
+
+            @@include('./partials/detached-left-sidebar.html')
+
+            <div class="content-page">
+                <div class="content">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box page-title-box-sm">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Principal</a></li>
+                                        <li class="breadcrumb-item active">Detalle de producto</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Productos populares</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" id="data-container"></div>
+                    </div>
+                    <div class="d-flex justify-content-center" id="pagination-container"></div>
+                </div>
+
+                @@include('./partials/footer.html')
+            </div>
+
+        </div>
+
+    </div>
+
+    @@include('./partials/templates/product-item.html')
+
+    <script src="assets/js/app.min.js"></script>    
+
+    <script src="assets/js/pages/app.productos.js"></script>
+</body>
+
+</html>

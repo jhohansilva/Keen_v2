@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hyper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-layout="detached">
+
+    <!-- Topbar Start -->
+    <div class="navbar-custom topnav-navbar">
+        <div class="container-fluid">
+
+            <!-- LOGO -->
+            <a href="index.html" class="topnav-logo">
+                <span class="topnav-logo-lg">
+                    <img src="assets/images/logo.png" alt="" height="16">
+                </span>
+                <span class="topnav-logo-sm">
+                    <img src="assets/images/logo_sm.png" alt="" height="16">
+                </span>
+            </a>
+
+            <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                <li class="dropdown notification-list">
+                    <a class="nav-link" href="#">
+                        <i class="dripicons-cart noti-icon"></i>
+                        <span class="badge badge-success badge-pill float-right mt-3">1</span>
+                    </a>
+                </li>
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" id="topbar-userdrop"
+                        href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="account-user-avatar">
+                            <img src="assets/images/users/avatar-js.jpg" alt="user-image" class="rounded-circle">
+                        </span>
+                        <span>
+                            <span class="account-user-name">Jhohan Silva</span>
+                            <span class="account-position">Colombia</span>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
+                        aria-labelledby="topbar-userdrop">
+                        <!-- item-->
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">Welcome !</h6>
+                        </div>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-circle mr-1"></i>
+                            <span>My Account</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-edit mr-1"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-lifebuoy mr-1"></i>
+                            <span>Support</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-lock-outline mr-1"></i>
+                            <span>Lock Screen</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="mdi mdi-logout mr-1"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+            <a class="button-menu-mobile disable-btn">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+            <div class="app-search">
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Busqueda...">
+                        <span class="mdi mdi-magnify"></span>
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" type="submit">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end Topbar -->
+
+    <div class="container-fluid">
+
+        <div class="wrapper">
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu left-side-menu-detached">
+
+                <div class="leftbar-user">
+                    <a href="javascript: void(0);">
+                        <img src="assets/images/users/avatar-js.jpg"
+                            alt="user-image" height="42" class="rounded-circle shadow-sm">
+                        <span class="leftbar-user-name">Jhohan Silva</span>
+                    </a>
+                </div>
+
+                <!--- Sidemenu -->
+                <ul class="metismenu side-nav side-nav-light">
+                    <li class="side-nav-item">
+                        <a href="javascript: void(0);" class="side-nav-link active">
+                            <i class="dripicons-store"></i>
+                            <span> Principal </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-title side-nav-item">Compras</li>
+
+                    <li class="side-nav-item">
+                        <a href="javascript: void(0);" class="side-nav-link">
+                            <i class="dripicons-view-apps"></i>
+                            <span>Mis pedidos </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="side-nav-second-level" aria-expanded="false">
+                            <li>
+                                <a href="apps-calendar.html">Calendar</a>
+                            </li>
+                            <li class="side-nav-item">
+                                <a href="javascript: void(0);" aria-expanded="false">Projects
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="side-nav-third-level" aria-expanded="false">
+                                    <li>
+                                        <a href="apps-projects-list.html">List</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-projects-details.html">Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="apps-tasks.html">Tasks</a>
+                            </li>
+                            <li class="side-nav-item">
+                                <a href="javascript: void(0);" aria-expanded="false">eCommerce
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="side-nav-third-level" aria-expanded="false">
+                                    <li>
+                                        <a href="apps-ecommerce-products.html">Products</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-products-details.html">Products Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-orders.html">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-orders-details.html">Order Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-customers.html">Customers</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-checkout.html">Checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="apps-ecommerce-sellers.html">Sellers</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box page-title-box-sm">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="index.html">Principal</a></li>
+                                        <li class="breadcrumb-item active">Detalle de producto</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Productos populares</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" id="data-container"></div>
+                    </div>
+                    <div class="d-flex justify-content-center" id="pagination-container"></div>
+                </div>
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                2018 - 2019 © Hyper - Coderthemes.com
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-md-block">
+                                    <a href="javascript: void(0);">About</a>
+                                    <a href="javascript: void(0);">Support</a>
+                                    <a href="javascript: void(0);">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <script id="template-item" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="col-lg-3 col-md-4 item-shop" data-href="productos.html?id={{Id}}">
+            <div class="card d-block">
+                <div class="item-image">
+                    <img class="card-img-top d-inline-block" src="{{Previa}}" alt="Card image cap">
+                </div>
+                <div class="card-body p-2">
+                    <h5 class="card-title text-center">{{Titulo}}</h5>
+                    <div class="item-text card-text text-center">
+                        <p>{{Descripcion}}</p>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-right font-weight-bolder font-15 text-dark">$ {{Valor}}</li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="assets/js/app.min.js"></script>    
+
+    <script src="assets/js/pages/app.productos.js"></script>
+</body>
+
+</html>

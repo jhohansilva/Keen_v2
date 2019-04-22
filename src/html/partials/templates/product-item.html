@@ -1,0 +1,20 @@
+<script id="template-item" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="col-lg-3 col-md-4 item-shop" data-href="productos.html?id={{Id}}">
+        <div class="card d-block">
+            <div class="item-image">
+                <img class="card-img-top d-inline-block" src="{{Previa}}" alt="Card image cap">
+            </div>
+            <div class="card-body p-2">
+                <h5 class="card-title text-center">{{Titulo}}</h5>
+                <div class="item-text card-text text-center">
+                    <p>{{Descripcion}}</p>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-right font-weight-bolder font-15 text-dark">$ {{Valor}}</li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</script>

@@ -1,0 +1,48 @@
+.item-shop {
+  cursor: pointer;
+  float: left;
+
+  .item-image {
+    height: 200px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 150px;
+      max-height: 150px;
+      max-width: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  .item-text {
+    height: 50px;
+    overflow: hidden;
+  }
+}
+
+.text-dark-blue {
+  color: $dark-blue;
+}
+
+@media (max-width: 425px) {
+  .item-shop {
+    .card {
+      margin-bottom: 5px !important;
+    }
+
+    padding: 5px;
+    width: 50%;
+    flex-grow: unset;
+    flex-basis: auto;
+
+    .image-card {
+      height: 150px;
+
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
