@@ -5,14 +5,14 @@
             "Id": "ITEM01",
             "Descripcion": "Producto prueba",
             "Valor": "1.000,00",
-            "Previa": "/assets/images/products/product-1.jpg"
+            "Previa": "/assets/images/products/ITEM01.jpg"
         },
         {
             "Titulo": "Producto 2",
             "Id": "ITEM02",
             "Descripcion": "Producto prueba 2 ",
             "Valor": "52.000,00",
-            "Previa": "/assets/images/products/product-3.jpg"
+            "Previa": "/assets/images/products/ITEM02.jpg"
         }
     ]
 }

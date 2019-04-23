@@ -277,6 +277,7 @@ gulp.task("javascript", function () {
             folder.src + "js/vendor/bootstrap-datepicker.min.js",
             folder.src + "js/vendor/pagination.min.js",
             folder.src + "js/vendor/app.ajax.js",
+            folder.src + "js/vendor/app.comun.js",
             folder.src + "js/hyper.js"
         ])
         .pipe(sourcemaps.init())

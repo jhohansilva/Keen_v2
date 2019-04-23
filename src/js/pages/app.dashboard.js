@@ -5,8 +5,12 @@
         this.$body = $("body")
     };
 
-    $(document).on('click', '[data="href"]', function () {
-        console.log('test');
+    $(document).on('click', '[data-href]', function () {
+        var lnk = $(this).data().href;
+        console.log(lnk);
+        console.log(location.port)
+
+        window.location.href = (location.port ? 'productos.html' : 'productos') + '?id=' + lnk;
     })
 
     Dashboard.prototype.init = function () {
@@ -14,8 +18,10 @@
     };
 
     var _getProductos = function () {
+        console.log(get_url('/assets/json/productos.json'));
+
         get_data({
-            url: '/assets/json/productos.json',
+            url: get_url('/assets/json/productos.json'),
             data: null,
             callback: _loadItems
         });

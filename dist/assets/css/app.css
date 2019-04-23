@@ -8454,13 +8454,13 @@ body[data-layout="detached"] {
 
 .navbar-custom {
   padding: 0 30px;
-  background-color: #065796;
+  background-color: #08254e;
   -webkit-box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
           box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
   margin: -5px -20px 0;
   min-height: 70px; }
   .navbar-custom .topbar-left {
-    background-color: #065796;
+    background-color: #08254e;
     height: 70px;
     position: fixed;
     z-index: 1;
@@ -8581,8 +8581,8 @@ body[data-layout="detached"] {
   padding: calc(32px / 2) 20px calc(32px / 2) 57px !important;
   text-align: left !important;
   position: relative;
-  background-color: #065da0;
-  border: 1px solid #0765af;
+  background-color: #092957;
+  border: 1px solid #0a3065;
   border-width: 0 1px;
   min-height: 70px; }
   .nav-user .account-user-avatar {

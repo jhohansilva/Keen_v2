@@ -25514,6 +25514,13 @@ contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoo
     }
 
 })(jQuery);
+var get_url = function (dir) {
+    return (location.port ? '' : '/keen/dist/') + dir;
+}
+
+function getParam(param) {
+    return new URLSearchParams(window.location.search).get(param);
+}
 /**
  * Theme: Hyper - Responsive Bootstrap 4 Admin Dashboard
  * Author: Coderthemes
