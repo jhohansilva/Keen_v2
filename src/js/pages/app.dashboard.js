@@ -6,11 +6,8 @@
     };
 
     $(document).on('click', '[data-href]', function () {
-        var lnk = $(this).data().href;
-        console.log(lnk);
-        console.log(location.port)
-
-        window.location.href = (location.port ? 'productos.html' : 'productos') + '?id=' + lnk;
+        var lnk = $(this).data().href;        
+        window.location.href = (location.port ? 'productos.html' : 'productos') + '?ref=' + lnk;
     })
 
     Dashboard.prototype.init = function () {
@@ -18,10 +15,8 @@
     };
 
     var _getProductos = function () {
-        console.log(get_url('/assets/json/productos.json'));
-
         get_data({
-            url: get_url('/assets/json/productos.json'),
+            url: get_url(ctrl('HJTX3gAAAANV+mQh2Vcraf6Tyb8VX7Zw1eqFZDNn24hDa5i7W+UB/NCeLuf9QMp8e9s+gAHzhdvhcaMBAgH0urQYP3GbTIifY6LNnbq73rrP83UfsECPJgHaM+5wXjsB23XdLmijCDuhlwuPPkKcQTf6w6MgX5qWo+4DYob/B3IQ3o1jk16XTX4H893B2j2XDzSMCO8++0HPysnCyEfZD21N06weFQ0pydY5tSI2wgdEarC5uOo+GBMS1BlY19zerAC06pmc4ROcKXI0i/QQGT/AnwEiukAhmsXGewrcyVsaZ39Oa9pwL1SMhg==')),
             data: null,
             callback: _loadItems
         });

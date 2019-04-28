@@ -12,7 +12,8 @@
             "Id": "ITEM02",
             "Descripcion": "Producto prueba 2 ",
             "Valor": "52.000,00",
-            "Previa": "/assets/images/products/ITEM02.jpg"
+            "Previa": "/assets/images/products/ITEM02.jpg",
+            "Presentacion": "Arroba"
         }
     ]
 }

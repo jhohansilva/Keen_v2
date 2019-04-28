@@ -15,7 +15,8 @@
                 method: 'GET',
                 data: data,
                 dataType: 'json',
-                url: url
+                url: url,
+                async: false
             }).done(callback);
         }
     }

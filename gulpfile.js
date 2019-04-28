@@ -13,7 +13,8 @@ var gulp = require("gulp"),
     lodash = require("lodash"),
     gulpSequence = require("gulp-sequence"),
     browsersync = require("browser-sync"),
-    fileinclude = require('gulp-file-include');
+    fileinclude = require('gulp-file-include'),
+    removeHtmlComments = require('gulp-remove-html-comments');
 
 var folder = {
     src: "src/", // source files
@@ -171,6 +172,7 @@ gulp.task("html", function () {
             basepath: '@file',
             indent: true
         }))
+        .pipe(removeHtmlComments())
         .pipe(gulp.dest(out));
 });
 
@@ -197,7 +199,7 @@ gulp.task("css", function () {
         .pipe(gulp.dest(folder.dist_assets + "css/"));
 
     return gulp
-        .src([folder.src + "/scss/app.scss",folder.src + "/scss/app-dark.scss"])
+        .src([folder.src + "/scss/app.scss", folder.src + "/scss/app-dark.scss"])
         .pipe(sourcemaps.init())
         .pipe(sass()) // scss to css
         .pipe(
@@ -215,7 +217,7 @@ gulp.task("css", function () {
         )
         .pipe(sourcemaps.write("./")) // source maps for app.min.css
         .pipe(gulp.dest(folder.dist_assets + "css/"));
-    });
+});
 
 // js
 gulp.task("javascript", function () {
@@ -271,6 +273,7 @@ gulp.task("javascript", function () {
             folder.src + "js/vendor/select2.min.js",
             folder.src + "js/vendor/jquery.mask.min.js",
             folder.src + "js/vendor/jquery.bootstrap.wizard.min.js",
+            folder.src + "js/vendor/app.ctrl.js",
             folder.src + "js/vendor/bootstrap-timepicker.min.js",
             folder.src + "js/vendor/jquery.bootstrap-touchspin.min.js",
             folder.src + "js/vendor/bootstrap-maxlength.min.js",

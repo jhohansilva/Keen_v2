@@ -1,0 +1,2 @@
+// Buscar en array
+var consulta = busqueda(ARRAY, INDEX, VALOR);

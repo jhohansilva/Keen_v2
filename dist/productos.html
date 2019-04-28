@@ -14,11 +14,11 @@
 
 <body data-layout="detached">
 
-    <!-- Topbar Start -->
+    
     <div class="navbar-custom topnav-navbar">
         <div class="container-fluid">
 
-            <!-- LOGO -->
+            
             <a href="index.html" class="topnav-logo">
                 <span class="topnav-logo-lg">
                     <img src="assets/images/logo.png" alt="" height="16">
@@ -32,7 +32,7 @@
                 <li class="dropdown notification-list">
                     <a class="nav-link" href="#">
                         <i class="dripicons-cart noti-icon"></i>
-                        <span class="badge badge-success badge-pill float-right mt-3">1</span>
+                        <span class="badge badge-success badge-pill float-right mt-3">0</span>
                     </a>
                 </li>
 
@@ -49,36 +49,36 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
                         aria-labelledby="topbar-userdrop">
-                        <!-- item-->
+                        
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Welcome !</h6>
                         </div>
 
-                        <!-- item-->
+                        
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <i class="mdi mdi-account-circle mr-1"></i>
                             <span>My Account</span>
                         </a>
 
-                        <!-- item-->
+                        
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <i class="mdi mdi-account-edit mr-1"></i>
                             <span>Settings</span>
                         </a>
 
-                        <!-- item-->
+                        
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <i class="mdi mdi-lifebuoy mr-1"></i>
                             <span>Support</span>
                         </a>
 
-                        <!-- item-->
+                        
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <i class="mdi mdi-lock-outline mr-1"></i>
                             <span>Lock Screen</span>
                         </a>
 
-                        <!-- item-->
+                        
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <i class="mdi mdi-logout mr-1"></i>
                             <span>Logout</span>
@@ -108,13 +108,13 @@
             </div>
         </div>
     </div>
-    <!-- end Topbar -->
+    
 
     <div class="container-fluid">
 
         <div class="wrapper">
 
-            <!-- ========== Left Sidebar Start ========== -->
+            
             <div class="left-side-menu left-side-menu-detached">
 
                 <div class="leftbar-user">
@@ -125,7 +125,7 @@
                     </a>
                 </div>
 
-                <!--- Sidemenu -->
+                
                 <ul class="metismenu side-nav side-nav-light">
                     <li class="side-nav-item">
                         <a href="javascript: void(0);" class="side-nav-link active">
@@ -197,13 +197,13 @@
                     </li>
                 </ul>
 
-                <!-- End Sidebar -->
+                
 
                 <div class="clearfix"></div>
-                <!-- Sidebar -left -->
+                
 
             </div>
-            <!-- Left Sidebar End -->
+            
 
             <div class="content-page">
                 <div class="content">
@@ -217,7 +217,7 @@
                                         <li class="breadcrumb-item active">Detalle de producto</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Productos populares</h4>
+                                <h4 class="page-title">Detalle de producto</h4>
                             </div>
                         </div>
                     </div>
@@ -228,27 +228,23 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-5">
-                                            <!-- Product image -->
+                                            
                                             <a href="javascript: void(0);" class="text-center d-block mb-4">
-                                                <img id="img-prev" class="img-fluid"
-                                                    style="max-width: 280px;" alt="Product-img" />
+                                                <img id="img-prev" class="img-fluid" style="max-width: 280px;" />
                                             </a>
 
                                             <div class="d-lg-flex d-none justify-content-center">
                                                 <a href="javascript: void(0);">
-                                                    <img id="img-prev-thumb"
-                                                        class="img-fluid img-thumbnail p-2" style="max-width: 75px;"
-                                                        alt="Product-img" />
-                                                </a>                                              
+                                                    <img id="img-prev-thumb" class="img-fluid img-thumbnail p-2"
+                                                        style="max-width: 75px;" />
+                                                </a>
                                             </div>
-                                        </div> <!-- end col -->
+                                        </div> 
                                         <div class="col-lg-7">
                                             <form class="pl-lg-4">
-                                                <!-- Product title -->
-                                                <h3 class="mt-0">Amazing Modern Chair (Orange) <a
-                                                        href="javascript: void(0);" class="text-muted"><i
-                                                            class="mdi mdi-square-edit-outline ml-2"></i></a> </h3>
-                                                <p class="mb-1">Added Date: 09/12/2018</p>
+                                                
+                                                <h3 class="mt-0" id="title"></h3>
+                                                <p class="mb-1">Presentación: <a id="presentation"></a></p>
                                                 <p class="font-16">
                                                     <span class="text-warning mdi mdi-star"></span>
                                                     <span class="text-warning mdi mdi-star"></span>
@@ -257,68 +253,47 @@
                                                     <span class="text-warning mdi mdi-star"></span>
                                                 </p>
 
-                                                <!-- Product stock -->
+                                                
                                                 <div class="mt-3">
-                                                    <h4><span class="badge badge-success-lighten">Instock</span></h4>
+                                                    <h4><span class="badge badge-success-lighten">Disponible</span></h4>
                                                 </div>
 
-                                                <!-- Product description -->
+                                                
                                                 <div class="mt-4">
-                                                    <h6 class="font-14">Retail Price:</h6>
-                                                    <h3> $139.58</h3>
+                                                    <h6 class="font-14">Precio:</h6>
+                                                    <h3 id="price"></h3>
                                                 </div>
 
-                                                <!-- Quantity -->
+                                                
                                                 <div class="mt-4">
-                                                    <h6 class="font-14">Quantity</h6>
+                                                    <h6 class="font-14">Cantidad</h6>
                                                     <div class="d-flex">
                                                         <input type="number" min="1" value="1" class="form-control"
-                                                            placeholder="Qty" style="width: 90px;">
-                                                        <button type="button" class="btn btn-danger ml-2"><i
-                                                                class="mdi mdi-cart mr-1"></i> Add to cart</button>
+                                                            placeholder="Cnt" style="width: 90px;">
+                                                        <button type="button" class="btn btn-danger ml-2">
+                                                            <i class="mdi mdi-cart mr-1"></i>
+                                                            Agregar al carrito
+                                                        </button>
                                                     </div>
                                                 </div>
 
-                                                <!-- Product description -->
+                                                
                                                 <div class="mt-4">
-                                                    <h6 class="font-14">Description:</h6>
-                                                    <p>It is a long established fact that a reader will be distracted by
-                                                        the readable content of a page when looking at its layout. The
-                                                        point of using Lorem Ipsum is that it has a more-or-less normal
-                                                        distribution of letters, as opposed to using 'Content here,
-                                                        content here', making it look like readable English. </p>
+                                                    <h6 class="font-14">Descripción:</h6>
+                                                    <p id="text-descrip"></p>
                                                 </div>
-
-                                                <!-- Product information -->
-                                                <div class="mt-4">
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Available Stock:</h6>
-                                                            <p class="text-sm lh-150">1784</p>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Number of Orders:</h6>
-                                                            <p class="text-sm lh-150">5,458</p>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <h6 class="font-14">Revenue:</h6>
-                                                            <p class="text-sm lh-150">$8,57,014</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
                                             </form>
-                                        </div> <!-- end col -->
-                                    </div> <!-- end row-->
+                                        </div> 
+                                    </div> 
 
-                                </div> <!-- end card-body-->
-                            </div> <!-- end card-->
-                        </div> <!-- end col-->
+                                </div> 
+                            </div> 
+                        </div> 
                     </div>
-                    <!-- end row-->
+                    
                 </div>
 
-                <!-- Footer Start -->
+                
                 <footer class="footer">
                     <div class="container-fluid">
                         <div class="row">
@@ -335,36 +310,14 @@
                         </div>
                     </div>
                 </footer>
-                <!-- end Footer -->
+                
             </div>
 
         </div>
 
     </div>
 
-    <script id="template-item" type="text/x-handlebars-template">
-        {{#each this}}
-        <div class="col-lg-3 col-md-4 item-shop" data-href="{{Id}}">
-            <div class="card d-block">
-                <div class="item-image">
-                    <img class="card-img-top d-inline-block" src="{{Previa}}" alt="Card image cap">
-                </div>
-                <div class="card-body p-2">
-                    <h5 class="card-title text-center">{{Titulo}}</h5>
-                    <div class="item-text card-text text-center">
-                        <p>{{Descripcion}}</p>
-                    </div>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-right font-weight-bolder font-15 text-dark">$ {{Valor}}</li>
-                </ul>
-            </div>
-        </div>
-        {{/each}}
-    </script>
-
     <script src="assets/js/app.min.js"></script>
-
     <script src="assets/js/pages/app.productos.js"></script>
 </body>
 
