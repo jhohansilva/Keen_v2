@@ -6,15 +6,17 @@
     };
 
     Productos.prototype.init = function () {
-        $.ajax({
-            method: 'POST',
-            data: null,
-            // dataType: 'json',
-            url: 'http://localhost/keen/inc/clients/client.productos.php',
-        }).done(function (data) {
-            console.log(data);
-        });
-        // if (consulta) _llenarDatos(consulta);
+        // $.ajax({
+        //     method: 'POST',
+        //     data: null,
+        //     // dataType: 'json',
+        //     url: 'http://localhost/keen/inc/clients/client.productos.php',
+        // }).done(function (data) {
+        //     console.log(data);
+        // });
+
+        var consulta = busqueda('productos', 'Id', this.$param)
+        if (consulta) _llenarDatos(consulta);
     };
 
     var _llenarDatos = function (data) {
@@ -39,7 +41,7 @@
         $('#presentation').html(presentacion);
 
         // Precio
-        $('#price').html(valor);
+        $('#price').html('$ ' + valor);
 
         // Descripción
         $('#text-descrip').html(descripcion);
