@@ -348,11 +348,10 @@ gulp.task(
     gulpSequence("copy-assets", "html", "imageMin", "fonts", "css", "javascript")
 );
 
-// doc
-gulp.task("docs", function () {
-    browsersync.init({
-        server: {
-            baseDir: "docs"
-        }
-    });
-});
+// gulp.task("dist", function () {
+//     browsersync.init({
+//         server: {
+//             baseDir: "inc"
+//         }
+//     });
+// });

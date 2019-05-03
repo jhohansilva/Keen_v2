@@ -33,6 +33,7 @@
     "sass-lint": "^1.12.1"
   },
   "dependencies": {
+    "tar": ">=4.4.2",
     "@google/maps": "^0.5.5",
     "admin-resources": "git+https://github.com/coderthemes/admin-resources#master",
     "apexcharts": "^3.3.1",
