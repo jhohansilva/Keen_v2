@@ -6,14 +6,14 @@
     };
 
     Productos.prototype.init = function () {
-        // $.ajax({
-        //     method: 'POST',
-        //     data: null,
-        //     // dataType: 'json',
-        //     url: 'http://localhost/keen/inc/clients/client.productos.php',
-        // }).done(function (data) {
-        //     console.log(data);
-        // });
+        send_data({
+            data: null,
+            dataType: 'text',
+            url: 'http://localhost/keen/inc/clients/client.productos.php',
+            callback: function (data) {
+                console.log(data);
+            }
+        })
 
         var consulta = busqueda('productos', 'Id', this.$param)
         if (consulta) _llenarDatos(consulta);

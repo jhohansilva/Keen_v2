@@ -24586,12 +24586,27 @@ g);g.fixNavigationButtons()}})};e.fn.bootstrapWizard.defaults={tabClass:"nav nav
 (function ($) {
     $.ctrl = {
         _evaluate: function (data) {
-            switch (data) {
-                case "HJTX3gAAAANV+mQh2Vcraf6Tyb8VX7Zw1eqFZDNn24hDa5i7W+UB/NCeLuf9QMp8e9s+gAHzhdvhcaMBAgH0urQYP3GbTIifY6LNnbq73rrP83UfsECPJgHaM+5wXjsB23XdLmijCDuhlwuPPkKcQTf6w6MgX5qWo+4DYob/B3IQ3o1jk16XTX4H893B2j2XDzSMCO8++0HPysnCyEfZD21N06weFQ0pydY5tSI2wgdEarC5uOo+GBMS1BlY19zerAC06pmc4ROcKXI0i/QQGT/AnwEiukAhmsXGewrcyVsaZ39Oa9pwL1SMhg==":
-                    return '/assets/json/productos.json'; 
-                default:
-                    return 'error'
-            }
+            var retorno = false;
+
+            send_data({
+                data: { code: data },
+                dataType: 'text',
+                url: 'http://localhost/keen/inc/app.ctrl.php',
+                callback: function (data) {
+                    console.log(data);
+                    // data = data.split('|');
+                    if (data.split('|')[0] == '-1') console.log('Error');
+                    else retorno = data;
+                }
+            })
+
+            return retorno;
+            // switch (data) {
+            //     case "HJTX3gAAAANV+mQh2Vcraf6Tyb8VX7Zw1eqFZDNn24hDa5i7W+UB/NCeLuf9QMp8e9s+gAHzhdvhcaMBAgH0urQYP3GbTIifY6LNnbq73rrP83UfsECPJgHaM+5wXjsB23XdLmijCDuhlwuPPkKcQTf6w6MgX5qWo+4DYob/B3IQ3o1jk16XTX4H893B2j2XDzSMCO8++0HPysnCyEfZD21N06weFQ0pydY5tSI2wgdEarC5uOo+GBMS1BlY19zerAC06pmc4ROcKXI0i/QQGT/AnwEiukAhmsXGewrcyVsaZ39Oa9pwL1SMhg==":
+            //         return '/assets/json/productos.json';
+            //     default:
+            //         return 'error'
+            // }
         },
     }
 
@@ -25727,24 +25742,14 @@ contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoo
 })(this, window.jQuery);
 (function ($) {
     $.ruta_datos = {
-        _init: function (type, data, url, callback) {
-            switch (type) {
-                case "get":
-                    this._get(data, url, callback);
-                    break;
-                default:
-                    $.NotificationApp.send("Error!", "Opción de consulta ajax sin definir", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
-            }
-        },
-
-        _get: function (data, url, callback) {
+        _init: function (type, config) {            
             $.ajax({
-                method: 'GET',
-                data: data,
-                dataType: 'json',
-                url: url,
+                method: type,
+                data: config.data,
+                dataType: config.dataType || 'json',
+                url: config.url,
                 async: false
-            }).done(callback);
+            }).done(config.callback);
         }
     }
 
@@ -25752,7 +25757,14 @@ contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoo
         if (!config.data) config.data = null;
         if (!config.url) $.NotificationApp.send("Error!", "URL no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
         else if (!config.callback) $.NotificationApp.send("Error!", "Función de retorno no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
-        else $.ruta_datos._init('get', config.data, config.url, config.callback);
+        else $.ruta_datos._init('GET', config);
+    }
+
+    send_data = function (config) {        
+        if (!config.data) config.data = null;
+        if (!config.url) $.NotificationApp.send("Error!", "URL no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
+        else if (!config.callback) $.NotificationApp.send("Error!", "Función de retorno no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
+        else $.ruta_datos._init('POST', config);       
     }
 
 })(jQuery);
@@ -25770,7 +25782,7 @@ function busqueda(array, index, val) {
         case 'productos':
             get_data({
                 url: get_url(ctrl('HJTX3gAAAANV+mQh2Vcraf6Tyb8VX7Zw1eqFZDNn24hDa5i7W+UB/NCeLuf9QMp8e9s+gAHzhdvhcaMBAgH0urQYP3GbTIifY6LNnbq73rrP83UfsECPJgHaM+5wXjsB23XdLmijCDuhlwuPPkKcQTf6w6MgX5qWo+4DYob/B3IQ3o1jk16XTX4H893B2j2XDzSMCO8++0HPysnCyEfZD21N06weFQ0pydY5tSI2wgdEarC5uOo+GBMS1BlY19zerAC06pmc4ROcKXI0i/QQGT/AnwEiukAhmsXGewrcyVsaZ39Oa9pwL1SMhg==')),
-                callback: function (data) {
+                callback: function (data) {                    
                     var productos = data.Productos;
                     for (var i in productos) {
                         if (index === 'Id') if (productos[i].Id == val) retornar = productos[i];
