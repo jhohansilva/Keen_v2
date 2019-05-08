@@ -24586,15 +24586,13 @@ g);g.fixNavigationButtons()}})};e.fn.bootstrapWizard.defaults={tabClass:"nav nav
 (function ($) {
     $.ctrl = {
         _evaluate: function (data) {
-<<<<<<< HEAD
             var retorno = false;
 
             send_data({
                 data: { code: data },
                 dataType: 'text',
                 url: 'http://localhost/keen/inc/app.ctrl.php',
-                callback: function (data) {
-                    console.log(data);
+                callback: function (data) {                    
                     // data = data.split('|');
                     if (data.split('|')[0] == '-1') console.log('Error');
                     else retorno = data;
@@ -24602,20 +24600,6 @@ g);g.fixNavigationButtons()}})};e.fn.bootstrapWizard.defaults={tabClass:"nav nav
             })
 
             return retorno;
-            // switch (data) {
-            //     case "HJTX3gAAAANV+mQh2Vcraf6Tyb8VX7Zw1eqFZDNn24hDa5i7W+UB/NCeLuf9QMp8e9s+gAHzhdvhcaMBAgH0urQYP3GbTIifY6LNnbq73rrP83UfsECPJgHaM+5wXjsB23XdLmijCDuhlwuPPkKcQTf6w6MgX5qWo+4DYob/B3IQ3o1jk16XTX4H893B2j2XDzSMCO8++0HPysnCyEfZD21N06weFQ0pydY5tSI2wgdEarC5uOo+GBMS1BlY19zerAC06pmc4ROcKXI0i/QQGT/AnwEiukAhmsXGewrcyVsaZ39Oa9pwL1SMhg==":
-            //         return '/assets/json/productos.json';
-            //     default:
-            //         return 'error'
-            // }
-=======
-            switch (data) {
-                case "HJTX3gAAAANV+mQh2Vcraf6Tyb8VX7Zw1eqFZDNn24hDa5i7W+UB/NCeLuf9QMp8e9s+gAHzhdvhcaMBAgH0urQYP3GbTIifY6LNnbq73rrP83UfsECPJgHaM+5wXjsB23XdLmijCDuhlwuPPkKcQTf6w6MgX5qWo+4DYob/B3IQ3o1jk16XTX4H893B2j2XDzSMCO8++0HPysnCyEfZD21N06weFQ0pydY5tSI2wgdEarC5uOo+GBMS1BlY19zerAC06pmc4ROcKXI0i/QQGT/AnwEiukAhmsXGewrcyVsaZ39Oa9pwL1SMhg==":
-                    return '/assets/json/productos.json';                 
-                default:
-                    return 'error'
-            }
->>>>>>> 3f00df13556fbfc0fa6a1a63f4a1c76fba4b0889
         },
     }
 
@@ -25751,13 +25735,17 @@ contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoo
 })(this, window.jQuery);
 (function ($) {
     $.ruta_datos = {
-        _init: function (type, config) {            
+        _init: function (type, config) {
+            var http = config.url_ctrl ? ctrl(config.url_ctrl) : config.url;
             $.ajax({
                 method: type,
                 data: config.data,
                 dataType: config.dataType || 'json',
-                url: config.url,
-                async: false
+                url: http,
+                async: false,
+                beforeSend: function (request) {
+                    if (config.method) request.setRequestHeader("Method", config.method);
+                }
             }).done(config.callback);
         }
     }
@@ -25769,11 +25757,11 @@ contTemplate:'<tbody><tr><td colspan="7"></td></tr></tbody>',footTemplate:'<tfoo
         else $.ruta_datos._init('GET', config);
     }
 
-    send_data = function (config) {        
+    send_data = function (config) {
         if (!config.data) config.data = null;
-        if (!config.url) $.NotificationApp.send("Error!", "URL no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
+        if (!config.url && !config.url_ctrl) $.NotificationApp.send("Error!", "URL no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
         else if (!config.callback) $.NotificationApp.send("Error!", "Función de retorno no definida para la consulta", 'bottom-right', 'rgba(0,0,0,0.2)', 'error');
-        else $.ruta_datos._init('POST', config);       
+        else $.ruta_datos._init('POST', config);
     }
 
 })(jQuery);
