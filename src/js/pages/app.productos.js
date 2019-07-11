@@ -10,7 +10,7 @@
             data: { item: this.$param },
             dataType: 'text',
             method: 'request001',
-            url_ctrl: "HJTX3gAAAAMMsHUwbvXlL79CUiZY4z5Jo+sr54I3/1GLddUFZ1dxV8ETQuuo2tBScaZ6Tko9C8mpJG/hyswILqyvvC8qlWeziQtH50xiPHEIdzP39SBgEkxXWiCVIU2k8r0WkLzckxn3m0q5+GQUfg8AKvSOoAiwqAxK2ZkuMcx8dJeyQZXYqQhXIDB9bVKi4J/aEFsFqSxnTfipXRz/v8OCHOqOgoq+StZYaC4gvCkqPOCbJfEFy5rL7P+deRgvOZi91nQr5K3ns3Y2mJlFFV1NxNhp6BQBsYbJLOGK7Vum710VxCszR0vwheni8Y+xMM4V8CY=",
+            url_ctrl: "HJTX3gAAAAMMsHUwbvXlL79CUiZY4z5Jo+sr54I3/1GLddUFZ1dxV8ETQuuo2tBScaZ6Tko9C8mpJG/hyswILqyvvC8qlWeziQtH50xiPHEIdzP39SBgEkxXWiCVIU2k8r0WkLzckxn3m0q5+GQUfg8AKvSOoAiwqAxK2ZkuMcx8dJeyQZXYqQhXIDB9bVKi4J/aEFsFqSxnTfipXRz/v8OCHOqOgoq+StZYaC4gvCkqPOCbJfEFy5rL7P+deRgvOZi91nQr5K3ns3Y2mJlFFV1NxNhp6BQBsYbJLOGK7Vum710VxCszR0vwheni8Y+xMM4V8CY=",            
             callback: function (data) {
                 console.log(data);
             }
