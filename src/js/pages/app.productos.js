@@ -16,6 +16,15 @@
             }
         })
 
+        send_data({
+            data: { importarhtml: '800223811|1|0G10092S37077' },
+            dataType: 'text',            
+            url: "http://localhost/keen/inc/send_jh.php",
+            callback: function (data) {
+                console.log(data);
+            }
+        })
+
         // var consulta = busqueda('productos', 'Id', this.$param)
         // if (consulta) _llenarDatos(consulta);
     };
