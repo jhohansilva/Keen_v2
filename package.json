@@ -35,7 +35,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "admin-resources": "git+https://github.com/coderthemes/admin-resources#master",
-    "apexcharts": "^3.8.2",
+    "apexcharts": "^3.27.0",
     "blueimp-file-upload": "^9.32.0",
     "bootstrap": "^4.3.1",
     "bootstrap-datepicker": "^1.9.0",
