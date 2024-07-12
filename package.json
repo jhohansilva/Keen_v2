@@ -37,7 +37,7 @@
     "admin-resources": "git+https://github.com/coderthemes/admin-resources#master",
     "apexcharts": "^3.8.2",
     "blueimp-file-upload": "^9.32.0",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^5.0.0",
     "bootstrap-datepicker": "^1.9.0",
     "bootstrap-maxlength": "^1.6.0",
     "bootstrap-timepicker": "^0.5.2",
