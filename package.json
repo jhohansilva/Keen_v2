@@ -73,7 +73,7 @@
     "popper.js": "^1.15.0",
     "select2": "^4.0.7",
     "simplemde": "^1.11.2",
-    "summernote": "^0.8.12",
+    "summernote": "^0.9.0",
     "twitter-bootstrap-wizard": "^1.2.0",
     "typeahead.js": "^0.11.1"
   }
